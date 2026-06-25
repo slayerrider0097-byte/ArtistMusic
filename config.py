@@ -23,14 +23,14 @@ load_dotenv()
 class Config:
     def __init__(self):
         # Telegram API
-        self.API_ID: int = int(getenv("API_ID", "0"))
-        self.API_HASH: str = getenv("API_HASH", "")
-        self.BOT_TOKEN: str = getenv("BOT_TOKEN", "")
-        self.LOGGER_ID: int = int(getenv("LOGGER_ID", "0"))
-        self.OWNER_ID: int = int(getenv("OWNER_ID", "0"))
+        self.API_ID: int = int(getenv("API_ID", "16173998"))
+        self.API_HASH: str = getenv("API_HASH", "b28bfd52de7d3854a17ed22d7e68da6a")
+        self.BOT_TOKEN: str = getenv("BOT_TOKEN", "8943465481:AAF8l8hDlJVBmxHJIDfEExX3oiqtdtTYhpg")
+        self.LOGGER_ID: int = int(getenv("LOGGER_ID", "1004430426370"))
+        self.OWNER_ID: int = int(getenv("OWNER_ID", "7909301867"))
 
         # Database
-        self.MONGO_URL: str = getenv("MONGO_DB_URI", "")
+        self.MONGO_URL: str = getenv("MONGO_DB_URI", "mongodb+srv://Slayr367755:Arush%4012345@cluster0.zivdiiv.mongodb.net/?appName=Cluster0")
 
         # Limits
         self.DURATION_LIMIT: int = int(getenv("DURATION_LIMIT", "300")) * 60
@@ -38,12 +38,12 @@ class Config:
         self.PLAYLIST_LIMIT: int = int(getenv("PLAYLIST_LIMIT", "20"))
 
         # Assistant Sessions
-        self.SESSION1: str = getenv("STRING_SESSION", "")
+        self.SESSION1: str = getenv("STRING_SESSION", "BQGh1p0AfrrV_E1ynemv3e_Ik9NxbB2HglYKWGBkdtme8z4raoULusSjnGTC7h5fNVwJ67Uz_ksobZGOfE4itFF_7L-luhcX4SzGQWiHDNf-1Wfv7ps86LDIb87FoJXTpKfzYBn-t_-EwwAnGjMmHJ5YDuDE16Qw_iv1IeQC2Gb3BFE9vR4gOj96198JTrUOVfHEDXt99Mc1EKQ5b45lQWoHrFyRBObqHRqD7Cf6Ok_L8jnye-72l1RB-D_A80mjeFQ3T-4IaJyOw4VXXrrRIuoSTk6L3ebws2WV2H8TkqWWAo5dclGHzMMFXAvBftPnKu0sJPN49A7u6HiEJKboS-RMTe-RdAAAAAH3xp9MAA")
         self.SESSION2: str = getenv("STRING_SESSION2", "")
         self.SESSION3: str = getenv("STRING_SESSION3", "")
 
         # Support Links
-        self.SUPPORT_CHANNEL: str = getenv("SUPPORT_CHANNEL", "https://t.me/loveguruoo")
+        self.SUPPORT_CHANNEL: str = getenv("SUPPORT_CHANNEL", "https://t.me/ArushUpdates")
         self.SUPPORT_CHAT: str = getenv("SUPPORT_CHAT", "https://t.me/+571PcuJAHeU0MTU1")
 
         # Excluded Chats
@@ -58,7 +58,7 @@ class Config:
 
         # ArtistBots API
         self.ARTISTBOTS_API_URL: str = getenv("ARTISTBOTS_API_URL", "")
-        self.ARTISTBOTS_KEY: str = getenv("ARTISTBOTS_KEY", "")
+        self.ARTISTBOTS_KEY: str = getenv("ARTISTBOTS_KEY", "https://t.me/ArushSupport")
         self.ENABLE_API: bool = self._str_to_bool(getenv("ENABLE_API", "True"))
         self.ENABLE_COOKIES_FALLBACK: bool = self._str_to_bool(getenv("ENABLE_COOKIES_FALLBACK", "True"))
         self.API_TIMEOUT: int = int(getenv("API_TIMEOUT", "60"))
