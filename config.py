@@ -30,7 +30,7 @@ class Config:
         self.OWNER_ID: int = int(getenv("OWNER_ID", "7909301867"))
 
         # Database
-        self.MONGO_URL: str = getenv("MONGO_DB_URI", "mongodb+srv://Slayr367755:Arush%4012345@cluster0.zivdiiv.mongodb.net/?appName=Cluster0")
+        self.MONGO_URL: str = getenv("MONGO_DB_URI", "mongodb+srv://Slayr367755:Arush12345@cluster0.zivdiiv.mongodb.net/ArushMusic?retryWrites=true&w=majority&appName=Cluster0")
 
         # Limits
         self.DURATION_LIMIT: int = int(getenv("DURATION_LIMIT", "300")) * 60
