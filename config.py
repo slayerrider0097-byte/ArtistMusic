@@ -26,16 +26,16 @@ class Config:
         self.API_ID: int = int(getenv("API_ID", "0"))
         self.API_HASH: str = getenv("API_HASH", "")
         self.BOT_TOKEN: str = getenv("BOT_TOKEN", "")
-        self.LOGGER_ID: int = int(getenv("LOGGER_ID", "0"))
-        self.OWNER_ID: int = int(getenv("OWNER_ID", "0"))
+        self.LOGGER_ID: int = int(getenv("LOGGER_ID", "1004430426370"))
+        self.OWNER_ID: int = int(getenv("OWNER_ID", "7909301867"))
 
         # Database
         self.MONGO_URL: str = getenv("MONGO_DB_URI", "")
 
         # Limits
-        self.DURATION_LIMIT: int = int(getenv("DURATION_LIMIT", "300")) * 60
-        self.QUEUE_LIMIT: int = int(getenv("QUEUE_LIMIT", "30"))
-        self.PLAYLIST_LIMIT: int = int(getenv("PLAYLIST_LIMIT", "20"))
+        self.DURATION_LIMIT: int = int(getenv("DURATION_LIMIT", "30000")) * 60000
+        self.QUEUE_LIMIT: int = int(getenv("QUEUE_LIMIT", "300000"))
+        self.PLAYLIST_LIMIT: int = int(getenv("PLAYLIST_LIMIT", "20000"))
 
         # Assistant Sessions
         self.SESSION1: str = getenv("STRING_SESSION", "")
@@ -43,8 +43,8 @@ class Config:
         self.SESSION3: str = getenv("STRING_SESSION3", "")
 
         # Support Links
-        self.SUPPORT_CHANNEL: str = getenv("SUPPORT_CHANNEL", "https://t.me/elevenytsmusic")
-        self.SUPPORT_CHAT: str = getenv("SUPPORT_CHAT", "https://t.me/elevenytschats")
+        self.SUPPORT_CHANNEL: str = getenv("SUPPORT_CHANNEL", "https://t.me/ArushUpdates")
+        self.SUPPORT_CHAT: str = getenv("SUPPORT_CHAT", "https://t.me/ArushSupport")
 
         # Excluded Chats
         self.EXCLUDED_CHATS: List[int] = self._parse_excluded_chats()
