@@ -2,13 +2,13 @@
 # Copyright (c) 2026 ArtistBots
 # All Rights Reserved.
 #
-# Project      : ArtistBots API Telegram Music Bot
-# Powered By   : Artist
-# Type         : API Based Telegram Music Bot
+# Project : ArtistBots API Telegram Music Bot
+# Powered By : Artist
+# Type : API Based Telegram Music Bot
 #
-# Bot          : @ArtistApibot
-# Channel      : https://t.me/artistbots
-# GitHub       : https://github.com/elevenyts
+# Bot : @ArtistApibot
+# Channel : https://t.me/artistbots
+# GitHub : https://github.com/elevenyts
 #
 # Unauthorized copying, modification, or redistribution
 # of this source code without permission is prohibited.
@@ -27,13 +27,7 @@ class Inline:
     def cancel_dl(self, text) -> types.InlineKeyboardMarkup:
         return self.ikm([[self.ikb(text=text, callback_data=f"cancel_dl", style=ButtonStyle.PRIMARY)]])
 
-    def controls(
-        self,
-        chat_id: int,
-        status: str = None,
-        timer: str = None,
-        remove: bool = False,
-    ) -> types.InlineKeyboardMarkup:
+    def controls( self, chat_id: int, status: str = None, timer: str = None, remove: bool = False, ) -> types.InlineKeyboardMarkup:
         keyboard = []
         if status:
             keyboard.append(
@@ -73,9 +67,7 @@ class Inline:
             )
         return self.ikm(keyboard)
 
-    def help_markup(
-        self, _lang: dict, back: bool = False
-    ) -> types.InlineKeyboardMarkup:
+    def help_markup( self, _lang: dict, back: bool = False ) -> types.InlineKeyboardMarkup:
         """Create help menu with categorized buttons."""
         if back:
             rows = [
@@ -129,9 +121,7 @@ class Inline:
             ]
         ])
 
-    def play_queued(
-        self, chat_id: int, item_id: str, _text: str
-    ) -> types.InlineKeyboardMarkup:
+    def play_queued( self, chat_id: int, item_id: str, _text: str ) -> types.InlineKeyboardMarkup:
         return self.ikm(
             [
                 [
@@ -151,18 +141,14 @@ class Inline:
             ]
         )
 
-    def queue_markup(
-        self, chat_id: int, _text: str, playing: bool
-    ) -> types.InlineKeyboardMarkup:
+    def queue_markup( self, chat_id: int, _text: str, playing: bool ) -> types.InlineKeyboardMarkup:
         _action = "pause" if playing else "resume"
         return self.ikm(
             [[self.ikb(
                 text=_text, callback_data=f"controls {_action} {chat_id} q", style=ButtonStyle.SUCCESS)]]
         )
 
-    def settings_markup(
-        self, lang: dict, admin_only: bool, language: str, chat_id: int
-    ) -> types.InlineKeyboardMarkup:
+    def settings_markup( self, lang: dict, admin_only: bool, language: str, chat_id: int ) -> types.InlineKeyboardMarkup:
         return self.ikm(
             [
                 [
@@ -176,9 +162,7 @@ class Inline:
             ]
         )
 
-    def start_key(
-        self, lang: dict, private: bool = False
-    ) -> types.InlineKeyboardMarkup:
+    def start_key( self, lang: dict, private: bool = False ) -> types.InlineKeyboardMarkup:
         rows = [
             [
                 self.ikb(
@@ -189,8 +173,8 @@ class Inline:
             ],
             [
                 self.ikb(text=lang["help"], callback_data="help", style=ButtonStyle.SUCCESS),
-                self.ikb(text="📢 UPDATES",url="https://t.me/ArushUpdates",style=ButtonStyle.SUCCESS,
-),
+                self.ikb(text="📢 UPDATES", url="https://t.me/ArushUpdates", style=ButtonStyle.SUCCESS),
+            ],
             [
                 self.ikb(text=lang["support"], url=config.SUPPORT_CHAT, style=ButtonStyle.PRIMARY),
                 self.ikb(text=lang["channel"], url=config.SUPPORT_CHANNEL, style=ButtonStyle.PRIMARY),
@@ -206,4 +190,4 @@ class Inline:
                     self.ikb(text="ᴏᴘᴇɴ ɪɴ ʏᴏᴜᴛᴜʙᴇ", url=link, style=ButtonStyle.PRIMARY),
                 ],
             ]
-        )
+                )
