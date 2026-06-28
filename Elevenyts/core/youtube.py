@@ -394,7 +394,7 @@ class YouTube:
                 height_filter = ""
                 if self._max_video_height and self._max_video_height > 0:
                     height_filter = f"[height<={self._max_video_height}]"
-                format_chain = "best"
+                format_chain = "bv*+ba/b"
                 ydl_opts = {
                     **base_opts,
                     "format": format_chain,
