@@ -387,14 +387,14 @@ class YouTube:
                 "fragment_retries": 2,
                 "extractor_retries": 5,
                 "sleep_interval_requests": 1,
-                "extractor_args": {"youtube": {"player_client": ["android", "web"]}},
+                "extractor_args": {"youtube": {"player_client": ["web"]}},
             }
 
             if video:
                 height_filter = ""
                 if self._max_video_height and self._max_video_height > 0:
                     height_filter = f"[height<={self._max_video_height}]"
-                format_chain = "bv*+ba/b"
+                format_chain = "best"
                 ydl_opts = {
                     **base_opts,
                     "format": format_chain,
