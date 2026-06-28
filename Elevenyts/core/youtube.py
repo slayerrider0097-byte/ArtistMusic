@@ -394,11 +394,7 @@ class YouTube:
                 height_filter = ""
                 if self._max_video_height and self._max_video_height > 0:
                     height_filter = f"[height<={self._max_video_height}]"
-                format_chain = (
-                    f"bestvideo[ext=mp4]{height_filter}+bestaudio[ext=m4a]/"
-                    f"bestvideo{height_filter}+bestaudio/"
-                    "bestvideo+bestaudio/best"
-                )
+                format_chain = "best"
                 ydl_opts = {
                     **base_opts,
                     "format": format_chain,
@@ -413,7 +409,7 @@ class YouTube:
             else:
                 ydl_opts = {
                     **base_opts,
-                    "format": "bestaudio[ext=m4a]/bestaudio[acodec=opus]/bestaudio/best",
+                    "format": "bestaudio/best",
                     "postprocessors": [],
                 }
 
